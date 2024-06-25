@@ -1,4 +1,9 @@
 # Base layout template with Gulp, SCSS and Stylelint
-1. Create a repo using this template
-1. Replace `<your_account>` and `<repo_name>` with your Github username and the new repo name
-    - [DEMO LINK](https://<your_account>.github.io/<repo_name>/)
+
+  1.[DEMO LINK](https://zvir91.github.io/2048/);
+  2.[Github](https://github.com/zvir91/2048);
+  3.In this project, I created a clone of the 2048 game, learned to manipulate the DOM, handle user events, and implement game logic such as tile sliding, 
+    merging, and random tile generation. I also managed game state, tracked scores, and handled win/loss conditions.
+  4.Technologies that were used: HTML, JavaScript, Scss.
+
+

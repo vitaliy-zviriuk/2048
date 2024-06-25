@@ -286,4 +286,3 @@ function slideDown() {
     }
   }
 };
-console.log(window);
