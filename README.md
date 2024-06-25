@@ -1,4 +1,4 @@
-# Base layout template with Gulp, SCSS and Stylelint
+  Game 2048
 
   1.[DEMO LINK](https://zvir91.github.io/2048/);
   2.[Github](https://github.com/zvir91/2048);
