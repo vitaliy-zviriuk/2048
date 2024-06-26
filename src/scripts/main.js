@@ -9,6 +9,7 @@ const rows = 4;
 const columns = 4;
 let board;
 let score = 0;
+let isBordChanged = false;
 
 document.addEventListener('click', e => {
   if (e.target === start) {
@@ -168,17 +169,19 @@ function isFirstPressed(e) {
 document.addEventListener('keydown', e => {
   isFirstPressed(e);
 
+  isBordChanged = false;
+
   if (e.code === 'ArrowLeft') {
     slideLeft();
-    setTwo();
   } else if (e.code === 'ArrowRight') {
     slideRight();
-    setTwo();
   } else if (e.code === 'ArrowUp') {
     slideUp();
-    setTwo();
   } else if (e.code === 'ArrowDown') {
     slideDown();
+  }
+
+  if (isBordChanged) {
     setTwo();
   }
 
@@ -190,7 +193,23 @@ function deleteZero(row) {
   return row.filter(num => num !== 0);
 };
 
+function arraysNotEqual(a, b) {
+  if (a.length !== b.length) {
+    return true;
+  }
+
+  for (let i = 0; i < a.length; i++) {
+    if (a[i] !== b[i]) {
+      return true;
+    }
+  }
+
+  return false;
+}
+
 function slide(row) {
+  const originalRow = [...row];
+
   let changeRow = row;
 
   changeRow = deleteZero(changeRow);
@@ -208,6 +227,10 @@ function slide(row) {
 
   while (changeRow.length < columns) {
     changeRow.push(0);
+  }
+
+  if (arraysNotEqual(originalRow, changeRow)) {
+    isBordChanged = true;
   }
 
   return changeRow;
