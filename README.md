@@ -1,7 +1,8 @@
   Game 2048
 
   1.  [DEMO LINK](https://zvir91.github.io/2048/);      
-  2.  [Github](https://github.com/zvir91/2048);  
+  2.  [Github](https://github.com/zvir91/2048);
+
   3. In this project, I have implemented a clone of the popular 2048 game.  
     Through this project, I learned several key concepts and techniques in web development and JavaScript programming:        
 
@@ -35,5 +36,12 @@
       Scalability and Maintainability: Writing modular and reusable code that is easy to read and maintain.  
     Overall, this project gave me practical experience with creating an interactive game, manipulating the DOM, handling user inputs, and implementing game logic.  
 
-  4.  Technologies that were used: HTML, JavaScript, Scss.    
-  
+  4.  Technologies that were used: HTML, JavaScript, Scss.
+
+  5. To run project locally:  
+
+    git clone  
+
+    npm i  
+
+    npm start   

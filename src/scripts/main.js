@@ -11,9 +11,12 @@ let board;
 let score = 0;
 let isBordChanged = false;
 
+window.onload = setGame();
+
 document.addEventListener('click', e => {
   if (e.target === start) {
-    setGame();
+    setTwo();
+    setTwo();
 
     document.querySelector('.message-start').classList.add('hidden');
     document.querySelector('.button').classList.add('hidden');
@@ -26,7 +29,10 @@ document.addEventListener('click', e => {
 
     document.querySelector('.message-lose').classList.add('hidden');
 
+    gameScore.textContent = 0;
     setGame();
+    setTwo();
+    setTwo();
   }
 });
 
@@ -53,9 +59,6 @@ function setGame() {
       gameField.append(title);
     }
   }
-
-  setTwo();
-  setTwo();
 }
 
 function setTwo() {
@@ -103,14 +106,12 @@ function hasSimiliarTile() {
         return true;
       }
     }
+  }
 
-    for (let c = 0; c < columns; c++) {
-      const row = [board[0][c], board[1][c], board[2][c], board[3][c]];
-
-      for (let i = 0; i < row.length - 1; i++) {
-        if (row[i] === row[i + 1]) {
-          return true;
-        }
+  for (let c = 0; c < columns; c++) {
+    for (let r = 0; r < rows - 1; r++) {
+      if (board[r][c] === board[r + 1][c]) {
+        return true;
       }
     }
   }
