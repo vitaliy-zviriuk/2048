@@ -1,7 +1,7 @@
   Game 2048
 
-  1.  [DEMO LINK](https://zvir91.github.io/2048/);      
-  2.  [Github](https://github.com/zvir91/2048);
+  1.  [DEMO LINK](https://vitaliy-zviriuk.github.io/2048/);      
+  2.  [Github](https://github.com/vitaliy-zviriuk/2048);
 
   3. In this project, I have implemented a clone of the popular 2048 game.  
     Through this project, I learned several key concepts and techniques in web development and JavaScript programming:        
